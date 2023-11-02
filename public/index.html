@@ -18,72 +18,30 @@
           <div class="card">
             <div class="card-body p-5">
 
-              <form class="d-flex justify-content-center align-items-center mb-4">
+              <form class="d-flex justify-content-center align-items-center mb-4" id="add-task-form">
                 <div class="form-outline flex-fill">
-                  <input type="text" id="form2" class="form-control" placeholder="Введите новую задачу...">
+                  <input type="text" id="task-input" class="form-control" placeholder="Введите новую задачу...">
                 </div>
                 <button type="submit" class="btn btn-info ms-2">Добавить</button>
               </form>
 
               <!-- Tabs navs -->
-              <ul class="nav-header mb-2">
+              <ul class="nav-header my-mb-35">
                 <ul class="nav nav-tabs card-header-tabs" style="border: none;">
                     <li class="nav-item my-active">
-                        <a class="nav-link active" aria-current="true" href="#">Активная</a>
+                        <a class="nav-link active border-0" aria-current="true" href="#active-tasks">Активные</a>
                     </li>
-                    <li class="nav-item unactive">
-                        <a class="nav-link" href="#">Ссылка</a>
+                    <li class="nav-item">
+                        <a class="nav-link border-0" href="#completed-tasks">Завершенные</a>
                     </li>
-                    <li class="nav-item unactive">
-                        <a class="nav-link">Отключенная</a>
-                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link border-0" href="#uncompleted-tasks">Незавершенные</a>
+                  </li>
                 </ul>
             </ul>
-            
-              <!-- Tabs navs -->
-
-              <!-- Task list -->
-              <ul class="list-group mb-0" id="task-list">
-                <li class="list-group-item d-flex align-items-center border-0 mb-2 rounded"
-                  style="background-color: #f4f6f7;">
-                  <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked>
-                  <s>Какая-то задача</s>
-                  <span class="ms-auto">
-                    <button class="btn btn-danger btn-sm delete-task">
-                      <i class="fas fa-times"></i>
-                    </button>
-                  </span>
-                </li>
-                <li class="list-group-item d-flex align-items-center border-0 mb-2 rounded"
-                  style="background-color: #f4f6f7;">
-                  <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked>
-                  <s>Какая-то задача</s>
-                  <span class="ms-auto">
-                    <button class="btn btn-danger btn-sm delete-task">
-                      <i class="fas fa-times"></i>
-                    </button>
-                  </span>
-                </li>
+              <ul class="list-group mb-0" id="active-tasks">
+                <!-- Добавленные активные задачи будут отображаться здесь -->
               </ul>
-              <!-- Task list -->
-
-              <!-- Completed Tasks -->
-              <div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
-                <ul class="list-group mb-0">
-                  <li class="list-group-item d-flex align-items-center border-0 mb-2 rounded"
-                    style="background-color: #f4f6f7;">
-                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked>
-                    <s>Завершенная задача 1</s>
-                  </li>
-                  <li class="list-group-item d-flex align-items-center border-0 mb-2 rounded"
-                    style="background-color: #f4f6f7;">
-                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked>
-                    <s>Завершенная задача 2</s>
-                  </li>
-                </ul>
-              </div>
-              <!-- Completed Tasks -->
-            </div>
           </div>
 
         </div>
@@ -93,4 +51,5 @@
 </body>
 <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/public/js/delete.js"> </script>
+<script src="/public/js/new.js"> </script>
 </html>
