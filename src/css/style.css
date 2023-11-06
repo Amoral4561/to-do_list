@@ -409,4 +409,16 @@ body {
   background-color: #DCDCDC;
   border-bottom: 3px solid #007BFF;
   color: #000;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.my-between {
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */
