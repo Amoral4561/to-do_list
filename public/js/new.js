@@ -1,53 +1,23 @@
-const addTaskForm = document.getElementById("add-task-form");
-const taskInput = document.getElementById("task-input");
-const activeTasksList = document.getElementById("active-tasks");
-const completedTasksList = document.getElementById("completed-tasks");
-const uncompletedTasksList = document.getElementById("uncompleted-tasks");
+const buttonAll = document.getElementById("all-tab");
+const buttonComp = document.getElementById("compl-tab");
+const buttonUncomp = document.getElementById("uncompl-tab");
 
-addTaskForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const taskText = taskInput.value.trim();
+buttonComp.onclick = () => {
+  const tasks = document.querySelectorAll(".list-group-item");
+  console.log("Ебать");
 
-  if (taskText !== "") {
-    const taskItem = document.createElement("li");
-    taskItem.classList.add(
-      "list-group-item",
-      "d-flex",
-      "align-items-center",
-      "border-0",
-      "mb-2",
-      "rounded"
-    );
-    taskItem.style.backgroundColor = "#f4f6f7";
-    // переписать от сюда
-
-    const checkbox = document.createElement("input");
-    checkbox.classList.add("form-check-input", "me-2");
-    checkbox.type = "checkbox";
-    checkbox.value = taskText;
-    checkbox.setAttribute("aria-label", "...");
-    checkbox.addEventListener("change", () => {
-      taskItem.style.textDecoration = checkbox.checked
-        ? "line-through"
-        : "none";
-    });
-
-    const taskTextElement = document.createElement("span");
-    taskTextElement.innerText = taskText;
-    taskTextElement.style.flex = "1";
-
-    const deleteButton = document.createElement("button");
-    deleteButton.classList.add("btn", "btn-danger", "btn-sm", "delete-task");
-    deleteButton.innerHTML = '<i class="fas fa-times"></i>';
-    deleteButton.addEventListener("click", () => {
-      taskItem.remove();
-    });
-
-    taskItem.appendChild(checkbox);
-    taskItem.appendChild(taskTextElement);
-    taskItem.appendChild(deleteButton);
-
-    activeTasksList.appendChild(taskItem);
-    taskInput.value = "";
-  }
-});
+  tasks.forEach(function (task) {
+    const checkbox = task.querySelector('input[type="checkbox"]');
+    if (checkbox.checked) {
+      task.style.display = "none !important";
+      console.log("Ебать 2");
+    } else {
+      task.style.display = "block";
+    }
+  });
+};
+//функция работает но не ставиться именно task.style.display = "none !important";
+// надо понять почему и дописать
+console.log("Button All:", buttonAll);
+console.log("Button Completed:", buttonComp);
+console.log("Button Uncompleted:", buttonUncomp);

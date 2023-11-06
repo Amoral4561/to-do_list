@@ -26,21 +26,40 @@
               </form>
 
               <!-- Tabs navs -->
-              <ul class="nav-header my-mb-35">
+              <nav class="nav-header my-mb-35">
                 <ul class="nav nav-tabs card-header-tabs" style="border: none;">
-                    <li class="nav-item my-active">
-                        <a class="nav-link active border-0" aria-current="true" href="#active-tasks">Активные</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link border-0" href="#completed-tasks">Завершенные</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link border-0" href="#uncompleted-tasks">Незавершенные</a>
+                  <li class="nav-item my-active">
+                    <button id="all-tab" class="nav-link active border-0" data-target="#active-tasks">Все</button>
+                  </li>
+                  <li class="nav-item">
+                    <button id="compl-tab" class="nav-link border-0" data-target="#completed-tasks">Завершенные</button>
+                  </li>
+                  <li class="nav-item">
+                    <button id="uncompl-tab" class="nav-link border-0" data-target="#uncompleted-tasks">Незавершенные</button>
                   </li>
                 </ul>
-            </ul>
-              <ul class="list-group mb-0" id="active-tasks">
-                <!-- Добавленные активные задачи будут отображаться здесь -->
+              </nav>
+              
+            <!-- активные задачи -->
+              <ul class="list-group mb-0">
+                <li class="list-group-item d-flex align-items-center border-0 mb-2 rounded noneActiv" style="background-color: rgb(244, 246, 247); text-decoration: none;">
+                  <input class="form-check-input me-2" type="checkbox" value="новая" aria-label="..."><span style="flex: 1 1 0%;">новая</span>
+                  <button class="btn btn-danger btn-sm delete-task">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </li>
+                <li class="list-group-item d-flex align-items-center border-0 mb-2 rounded" style="background-color: rgb(244, 246, 247); text-decoration: none;">
+                  <input class="form-check-input me-2" type="checkbox" value="новая" aria-label="..."><span style="flex: 1 1 0%;">новая</span>
+                  <button class="btn btn-danger btn-sm delete-task">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </li>
+                <li class="list-group-item d-flex align-items-center border-0 mb-2 rounded" style="background-color: rgb(244, 246, 247); text-decoration: none;">
+                  <input class="form-check-input me-2" type="checkbox" value="новая" aria-label="..."><span style="flex: 1 1 0%;">новая</span>
+                  <button class="btn btn-danger btn-sm delete-task">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </li>
               </ul>
           </div>
 
@@ -52,4 +71,6 @@
 <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/public/js/delete.js"> </script>
 <script src="/public/js/new.js"> </script>
+<script src="/public/js/strikethrough.js"> </script>
 </html>
+
