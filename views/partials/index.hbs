@@ -1,0 +1,85 @@
+<div class="card-body p-5">
+  <form
+    class="d-flex justify-content-center align-items-center mb-4"
+    id="add-task-form"
+  >
+    <div class="form-outline flex-fill">
+      <input
+        type="text"
+        id="task-input"
+        class="form-control"
+        placeholder="Введите новую задачу..."
+      />
+    </div>
+    <button type="submit" class="btn btn-info ms-2">Добавить</button>
+  </form>
+
+  <!-- Tabs navs -->
+  <nav class="nav-header my-mb-35">
+    <ul class="nav nav-tabs card-header-tabs" style="border: none;">
+      <li class="nav-item my-active">
+        <button
+          id="all-tab"
+          class="nav-link border-0"
+          data-target="#active-tasks"
+        >Все</button>
+      </li>
+      <li class="nav-item">
+        <button
+          id="compl-tab"
+          class="nav-link border-0"
+          data-target="#completed-tasks"
+        >Завершенные</button>
+      </li>
+      <li class="nav-item">
+        <button
+          id="uncompl-tab"
+          class="nav-link border-0"
+          data-target="#uncompleted-tasks"
+        >Незавершенные</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- активные задачи -->
+  <ul class="list-group mb-0">
+    <li
+      class="list-group-item d-flex align-items-center border-0 mb-2 rounded noneActiv my-between"
+      style="background-color: rgb(244, 246, 247); text-decoration: none;"
+    >
+      <input
+        class="form-check-input me-2"
+        type="checkbox"
+        value="новая"
+        aria-label="..."
+      /><span style="flex: 1 1 0%;">Сходить в магазин</span>
+      <button class="btn btn-danger btn-sm delete-task"></button>
+    </li>
+    <li
+      class="list-group-item d-flex align-items-center border-0 mb-2 rounded"
+      style="background-color: rgb(244, 246, 247); text-decoration: none;"
+    >
+      <input
+        class="form-check-input me-2"
+        type="checkbox"
+        value="новая"
+        aria-label="..."
+      /><span style="flex: 1 1 0%;">Уьраться дома</span>
+      <button class="btn btn-danger btn-sm delete-task">
+      </button>
+    </li>
+    <li
+      class="list-group-item d-flex align-items-center border-0 mb-2 rounded"
+      style="background-color: rgb(244, 246, 247); text-decoration: none;"
+    >
+      <input
+        class="form-check-input me-2"
+        type="checkbox"
+        value="новая"
+        aria-label="..."
+      /><span style="flex: 1 1 0%;">Пойти нахуй</span>
+      <button class="btn btn-danger btn-sm delete-task">
+      </button>
+    </li>
+  </ul>
+</div>

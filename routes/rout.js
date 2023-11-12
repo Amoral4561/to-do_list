@@ -3,9 +3,7 @@ const Router = require("express");
 const router = Router();
 
 router.get("/", (req, res, next) => {
-  res.send({
-    ok: "main page",
-  });
+  res.render("index", {});
 });
 
 router.get("/new", (req, res, next) => {
