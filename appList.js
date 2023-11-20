@@ -3,7 +3,7 @@ const rl = readline.createInterface(process.stdin, process.stdout);
 const express = require("express");
 const PORT = require("./constantPort/constants.js");
 const downApp = express();
-const router = require("./routs/rout.js");
+const router = require("./routes/rout.js");
 const { engine } = require("express-handlebars");
 //подклбчение библиотеки пути для express.static()
 const path = require("path");
@@ -20,7 +20,9 @@ downApp.set("view engine", "hbs");
 downApp.set("views", "./views");
 //компанда расширение public
 downApp.use(
-  express.static(path.join(__dirname, "public")) //не исползовать прямые пути к папке локалке и сервере
+  express.static(path.join(__dirname, "/public"), {
+    "Content-Type": "application/javascript",
+  })
 );
 
 downApp.use(router);
